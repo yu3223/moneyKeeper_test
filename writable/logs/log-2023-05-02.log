@@ -1,0 +1,22 @@
+CRITICAL - 2023-05-02 14:39:36 --> Call to undefined function App\Controllers\vie()
+in APPPATH/Controllers/Home.php on line 9.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper_Project/public/index.php')
+CRITICAL - 2023-05-02 14:52:51 --> Class "App\Controllers\PageNotFoundException" not found
+in APPPATH/Controllers/Pages.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Pages->view('Pages')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper_Project/public/index.php')
+CRITICAL - 2023-05-02 14:52:52 --> Class "App\Controllers\PageNotFoundException" not found
+in APPPATH/Controllers/Pages.php on line 32.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Pages->view('Pages')
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper_Project/public/index.php')
+INFO - 2023-05-02 15:21:28 --> CSRF token verified.

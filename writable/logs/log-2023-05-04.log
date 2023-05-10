@@ -1,0 +1,18 @@
+CRITICAL - 2023-05-04 09:49:51 --> Call to undefined method App\Models\NewsModel::getMember
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Member.php(15): CodeIgniter\Model->__call('getMember', [])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Member->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper_Project/public/index.php')
+CRITICAL - 2023-05-04 09:49:51 --> Call to undefined method App\Models\NewsModel::getMember
+in SYSTEMPATH/Model.php on line 842.
+ 1 APPPATH/Controllers/Member.php(15): CodeIgniter\Model->__call('getMember', [])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Member->index()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Member))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper_Project/public/index.php')
+INFO - 2023-05-04 09:59:35 --> CSRF token verified.
+INFO - 2023-05-04 09:59:51 --> CSRF token verified.
