@@ -71,3 +71,4 @@ FROM `member`', [], false)
 13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper/public/index.php')
 INFO - 2023-05-19 10:18:10 --> CSRF token verified.
 INFO - 2023-05-19 10:18:35 --> CSRF token verified.
+INFO - 2023-05-19 11:35:39 --> CSRF token verified.
