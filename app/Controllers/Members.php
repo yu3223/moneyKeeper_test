@@ -10,7 +10,7 @@ class Members extends Controller
 {
     public function index()
     {
-       // echo view('members/login');
+        echo view('members/login');
     }
 
 
@@ -47,10 +47,5 @@ class Members extends Controller
         ]);
 
         return view('members/login');
-    }
-
-    public function login()
-    {
-        echo view('members/login');
     }
 }

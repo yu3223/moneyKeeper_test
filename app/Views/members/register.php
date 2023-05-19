@@ -81,7 +81,7 @@
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="<?php echo base_url('Pages/login')?>">Already have an account? Login!</a>
+                                <a class="small" href="<?php echo base_url('members/login')?>">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,5 @@
     <!-- <script src="vendor/js/sb-admin-2.min.js"></script> -->
 
 </body>
-
 <?= $this->include("style/sb-admin-2") ?> 
-
 </html>
