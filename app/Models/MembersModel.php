@@ -14,9 +14,9 @@ class MembersModel extends Model
     {
         $memberData = $this->asArray()
                            ->where(['firstName' => $firstName,
-                                    'lastName' => $lastName,
-                                    'email' => $email,
-                                    'password' => $password])
+                                    'lastName'  => $lastName,
+                                    'email'     => $email,
+                                    'password'  => $password])
                            ->first();
         
         return $memberData ?? false;

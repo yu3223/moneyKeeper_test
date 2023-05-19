@@ -1,0 +1,73 @@
+INFO - 2023-05-19 10:04:18 --> CSRF token verified.
+ERROR - 2023-05-19 10:09:02 --> mysqli_sql_exception: Table 'moneykeeper.member' doesn't exist in /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/shenyuting/moneyKeeper/app/Models/MemberModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 /Users/shenyuting/moneyKeeper/app/Controllers/Members.php(16): App\Models\MemberModel->getMember()
+#8 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\Members->index()
+#9 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Members))
+#10 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/shenyuting/moneyKeeper/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/shenyuti...')
+#13 {main}
+CRITICAL - 2023-05-19 10:09:02 --> Table 'moneykeeper.member' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `member`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `member`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `member`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`', [], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Models/MemberModel.php(16): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Members.php(16): App\Models\MemberModel->getMember()
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Members->index()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Members))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper/public/index.php')
+ERROR - 2023-05-19 10:09:02 --> mysqli_sql_exception: Table 'moneykeeper.member' doesn't exist in /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:295
+Stack trace:
+#0 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 /Users/shenyuting/moneyKeeper/app/Models/MemberModel.php(16): CodeIgniter\BaseModel->findAll()
+#7 /Users/shenyuting/moneyKeeper/app/Controllers/Members.php(16): App\Models\MemberModel->getMember()
+#8 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(934): App\Controllers\Members->index()
+#9 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Members))
+#10 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /Users/shenyuting/moneyKeeper/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /Users/shenyuting/moneyKeeper/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(47): require_once('/Users/shenyuti...')
+#13 {main}
+CRITICAL - 2023-05-19 10:09:02 --> Table 'moneykeeper.member' doesn't exist
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 295.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(295): mysqli->query('SELECT *
+FROM `member`', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `member`')
+ 3 SYSTEMPATH/Database/BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `member`')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `member`', [], false)
+ 5 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH/Models/MemberModel.php(16): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH/Controllers/Members.php(16): App\Models\MemberModel->getMember()
+ 9 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Members->index()
+10 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Members))
+11 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/Users/shenyuting/moneyKeeper/public/index.php')
+INFO - 2023-05-19 10:18:10 --> CSRF token verified.
+INFO - 2023-05-19 10:18:35 --> CSRF token verified.
