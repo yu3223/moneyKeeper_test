@@ -31,13 +31,10 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->match(['get', 'post'], 'member/create', 'Member::create');
-$routes->get('member/(:segment)', 'Member::view/$1');
-$routes->get('member', 'Member::index');
-
 $routes->match(['get', 'post'], 'members/register', 'Members::register');
 $routes->get('members/(:segment)', 'Members::view/$1');
 $routes->get('members', 'Members::index');
+$routes->get('members/(:segment)', 'Members::$1');
 
 $routes->get('(:any)', 'Pages::view/$1');
 /*
