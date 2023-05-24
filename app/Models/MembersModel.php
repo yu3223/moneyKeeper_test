@@ -16,7 +16,7 @@ class MembersModel extends Model
                            ->where(['firstName' => $firstName,
                                     'lastName'  => $lastName,
                                     'email'     => $email,
-                                    'password'  => $password])
+                                    'password'  => sha1($password)])
                            ->first();
         
         return $memberData ?? false;

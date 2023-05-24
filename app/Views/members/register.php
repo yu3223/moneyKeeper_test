@@ -61,7 +61,7 @@
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password" required>
+                                            id="exampleRepeatPassword" placeholder="Repeat Password" name="rePassword" required>
                                     </div>
                                 </div>
                                 <input type="submit" class="btn btn-primary btn-user btn-block" value="Register Account">
