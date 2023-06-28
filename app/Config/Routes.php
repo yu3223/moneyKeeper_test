@@ -34,6 +34,7 @@ $routes->get('/', 'Home::index');
 $routes->match(['get', 'post'], 'members/register', 'Members::register');
 $routes->get('members/(:segment)', 'Members::view/$1');
 $routes->get('members', 'Members::index');
+$routes->get('/login', 'Members::login');
 $routes->get('members/(:segment)', 'Members::$1');
 
 $routes->get('(:any)', 'Pages::view/$1');

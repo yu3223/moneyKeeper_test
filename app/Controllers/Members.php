@@ -4,19 +4,26 @@ namespace App\Controllers;
 
 use App\Models\MembersModel;
 use CodeIgniter\Controller;
-use mysqli;
+
 
 class Members extends Controller
 {
+    //protected MembersModel $model;
+    
     public function index()
     {
         echo view('members/login');
     }
 
+    public function login()
+    {
+        echo view('members/login');
+    }
 
     public function register()
     {
         $model = model(MembersModel::class);
+        //$model = new MembersModel();
 
         helper('form');
 
@@ -26,13 +33,17 @@ class Members extends Controller
             return view('members/register');
         }
 
-        $post = $this->request->getPost(['firstName','lastName','email', 'password', 'rePassword']);
+        date_default_timezone_set('Asia/Taipei');
+        $date = date('Y-m-d H:i:s');
+
+        $data = $this->request->getPost();
+
+        $post = $this->request->getPost(['firstName', 'lastName', 'email', 'password', 'rePassword']);
   
         //Confirm that the two passwords are the same
-        $password = $_REQUEST['password'];
+        $password   = $_REQUEST['password'];
         $rePassword = $_REQUEST['rePassword'];
         if($password != $rePassword){
-            echo "<script>alert('The two passwords entered are not the same');</script>";
             return view('members/register');
         }
 
@@ -49,10 +60,11 @@ class Members extends Controller
         }
 
         $model->save([
-            'firstName' => $post['firstName'],
-            'lastName'  => $post['lastName'],
-            'email'     => $post['email'],
-            'password'  => $post['password'],
+            'm_firstName' => $post['firstName'],
+            'm_lastName'  => $post['lastName'],
+            'm_email'     => $post['email'],
+            'm_password'  => $post['password'],
+            'create_at'   => $date,
         ]);
 
         return view('members/login');
