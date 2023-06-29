@@ -8,7 +8,13 @@ use CodeIgniter\Controller;
 
 class Members extends Controller
 {
-    //protected MembersModel $model;
+    /**
+     * Member model.
+     * 
+     *
+     * @var MembersModel
+     */
+    protected MembersModel $model;
     
     public function index()
     {
@@ -20,6 +26,11 @@ class Members extends Controller
         echo view('members/login');
     }
 
+    /**
+     * Register
+     *
+     * @return void
+     */
     public function register()
     {
         $model = model(MembersModel::class);
@@ -63,7 +74,7 @@ class Members extends Controller
             'm_firstName' => $post['firstName'],
             'm_lastName'  => $post['lastName'],
             'm_email'     => $post['email'],
-            'm_password'  => $post['password'],
+            'm_password'  => password_hash($post['password'], PASSWORD_DEFAULT),
             'create_at'   => $date,
         ]);
 
