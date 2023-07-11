@@ -8,15 +8,17 @@ class MembersModel extends Model
 {
     protected $table = 'members';
 
-    protected $allowedFields = ['firstName', 'lastName', 'email', 'password'];
+    protected $allowedFields = [
+        'm_firstName', 'm_lastName', 'm_email', 'm_password', 'create_at', 'delete_at'
+    ];
 
     public function getMember($firstName, $lastName, $email, $password)
     {
         $memberData = $this->asArray()
-                           ->where(['firstName' => $firstName,
-                                    'lastName' => $lastName,
-                                    'email' => $email,
-                                    'password' => $password])
+                           ->where(['m_firstName' => $firstName,
+                                    'm_lastName'  => $lastName,
+                                    'm_email'     => $email,
+                                    'm_password'  => sha1($password)])
                            ->first();
         
         return $memberData ?? false;
