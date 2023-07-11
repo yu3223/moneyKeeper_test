@@ -8,7 +8,9 @@ class MembersModel extends Model
 {
     protected $table = 'members';
 
-    protected $allowedFields = ['m_firstName', 'm_lastName', 'm_email', 'm_password', 'create_at', 'delete_at'];
+    protected $allowedFields = [
+        'm_firstName', 'm_lastName', 'm_email', 'm_password', 'create_at', 'delete_at'
+    ];
 
     public function getMember($firstName, $lastName, $email, $password)
     {

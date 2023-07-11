@@ -14,7 +14,12 @@ class Members extends Controller
      *
      * @var MembersModel
      */
-    protected MembersModel $model;
+    protected MembersModel $membersModel;
+
+    public function __construct()
+    {
+        $this->membersModel = new MembersModel();
+    }
     
     public function index()
     {
@@ -46,7 +51,6 @@ class Members extends Controller
 
         date_default_timezone_set('Asia/Taipei');
         $date = date('Y-m-d H:i:s');
-
         $data = $this->request->getPost();
 
         $post = $this->request->getPost(['firstName', 'lastName', 'email', 'password', 'rePassword']);
