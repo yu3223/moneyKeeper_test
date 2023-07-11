@@ -39,7 +39,6 @@ class Members extends Controller
     public function register()
     {
         $model = model(MembersModel::class);
-        //$model = new MembersModel();
 
         helper('form');
 
